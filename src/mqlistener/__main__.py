@@ -1,8 +1,8 @@
-import stomp
-import time
-import os
-
 import logging
+import os
+import time
+
+import stomp
 
 LOGGER = logging.getLogger("mqlistener")
 
@@ -20,14 +20,14 @@ def run(host, port, topic, username, password):
         raise Exception(message)
     with stomp.Connection([(host, port)]) as conn:
         LOGGER.info(f"LISTENER: CONNECTING: host {host} port {port}")
-        
+
         listen = Listener()
         conn.set_listener('printing', listen)
         conn.connect(username=username, passcode=password)
         conn.subscribe(destination=topic, id=1, ack='auto')
-        
+
         LOGGER.info(f"LISTENER: DESTINATION: set to {topic}")
-        
+
         try:
             while 1:
                 time.sleep(2)
