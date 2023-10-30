@@ -13,8 +13,9 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-description = "One line description of your module"
+description = "Simple script that listens to a topic on activemq and prints out the messages"
 dependencies = [
+    "stomp.py",
     "typing-extensions;python_version<'3.8'",
 ] # Add project dependencies here, e.g. ["click", "numpy"]
 dynamic = ["version"]
@@ -43,11 +44,11 @@ dev = [
 mqlistener = "mqlistener.__main__:main"
 
 [project.urls]
-GitHub = "https://github.com/DiamondLightSource/mqlistener"
+GitHub = "https://github.com/rosesyrett/mqlistener"
 
 [[project.authors]] # Further authors may be added by duplicating this section
-email = "rose.yemelyanova@diamond.ac.uk"
-name = "Rose Yemelyanova"
+email = "rose-andriana.syrett@diamond.ac.uk"
+name = "Rose Syrett"
 
 
 [tool.setuptools_scm]
