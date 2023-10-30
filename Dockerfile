@@ -9,6 +9,8 @@ ARG PIP_OPTIONS=.
 ENV TOPIC=/topic/public.worker.event
 ENV HOST=localhost
 ENV PORT=61613
+ENV USERNAME=p2
+ENV PASSWORD=wat
 
 # Add any system dependencies for the developer/build environment here e.g.
 # RUN apt-get update && apt-get upgrade -y && \
@@ -35,6 +37,5 @@ FROM python:3.11-slim as runtime
 COPY --from=build /venv/ /venv/
 ENV PATH=/venv/bin:$PATH
 
-# change this entrypoint if it is not the same as the repo
 ENTRYPOINT ["mqlistener"]
-CMD [${TOPIC}, "--host", ${HOST}]
+
