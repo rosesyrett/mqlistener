@@ -1,14 +1,14 @@
 API
 ===
 
-.. automodule:: python3_pip_skeleton
+.. automodule:: mqlistener
 
-    ``python3_pip_skeleton``
+    ``mqlistener``
     -----------------------------------
 
-This is the internal API reference for python3_pip_skeleton
+This is the internal API reference for mqlistener
 
-.. data:: python3_pip_skeleton.__version__
+.. data:: mqlistener.__version__
     :type: str
 
     Version number as calculated by https://github.com/pypa/setuptools_scm
