@@ -5,7 +5,7 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Tests, lint and docs",
+            "label": "Tests and lint",
             "command": "tox -p",
             "options": {
                 "cwd": "${workspaceRoot}"
